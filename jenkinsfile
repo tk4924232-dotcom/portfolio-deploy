@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sshagent(credentials: ["${SSH_CRED}"]) {
                     sh '''
-                        echo "!!!Cleaning old files on server..."
+                        echo "!!!Cleaning old files on ......"
                         ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} "sudo rm -rf ${WEB_DIR}/*"
 
                         echo "Uploading new files to /tmp on server..."
